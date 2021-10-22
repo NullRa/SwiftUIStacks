@@ -15,19 +15,8 @@ struct ContentView: View {
             HStack {
                 PricingView(title: "PlanA", price: "$9", description: "per one", textColor: .white, bgColor: .purple)
                 
-                VStack {
-                    Text("PlanB")
-                        .font(.system(.title, design: .rounded))
-                        .fontWeight(.black)
-                    Text("$19")
-                        .font(.system(size: 40, weight: .heavy, design: .rounded))
-                    Text("per family")
-                        .font(.headline)
-                }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
-                .padding(40)
-                .background(Color(red: 240/255, green: 240/255, blue: 240/255))
-                .cornerRadius(10)
+                PricingView(title: "PlanB", price: "$19", description: "per family", textColor: .black, bgColor: Color(red: 240/255, green: 240/255, blue: 240/255))
+                
             }
             .padding(.horizontal)
         }
