@@ -10,14 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            VStack(alignment: .leading, spacing: 2) {
-                Text("Choose")
-                    .font(.system(.largeTitle, design: .rounded))
-                    .fontWeight(.black)
-                Text("Your Plan")
-                    .font(.system(.largeTitle, design: .rounded))
-                    .fontWeight(.black)
-            }
+            HeaderView()
         }
     }
 }
@@ -25,5 +18,18 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct HeaderView: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text("Choose")
+                .font(.system(.largeTitle, design: .rounded))
+                .fontWeight(.black)
+            Text("Your Plan")
+                .font(.system(.largeTitle, design: .rounded))
+                .fontWeight(.black)
+        }
     }
 }
