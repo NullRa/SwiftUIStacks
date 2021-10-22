@@ -41,6 +41,8 @@ struct ContentView: View {
                     .background(Color(red: 255/255, green: 183/255, blue: 37/255))
                     .offset(x: 0, y: 87)
             }
+            
+            Spacer()
         }
     }
 }
