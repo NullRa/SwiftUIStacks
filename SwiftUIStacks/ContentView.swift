@@ -28,6 +28,19 @@ struct ContentView: View {
                 .padding(40)
                 .background(Color.purple)
                 .cornerRadius(10)
+                
+                VStack {
+                    Text("PlanB")
+                        .font(.system(.title, design: .rounded))
+                        .fontWeight(.black)
+                    Text("$19")
+                        .font(.system(size: 40, weight: .heavy, design: .rounded))
+                    Text("per family")
+                        .font(.headline)
+                }
+                .padding(40)
+                .background(Color(red: 240/255, green: 240/255, blue: 240/255))
+                .cornerRadius(10)
             }
         }
     }
