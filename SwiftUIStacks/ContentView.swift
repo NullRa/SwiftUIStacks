@@ -13,22 +13,7 @@ struct ContentView: View {
             HeaderView()
             
             HStack {
-                VStack {
-                    Text("PlanA")
-                        .font(.system(.title, design: .rounded))
-                        .fontWeight(.black)
-                        .foregroundColor(.white)
-                    Text("$9")
-                        .font(.system(size: 40, weight: .heavy, design: .rounded))
-                        .foregroundColor(.white)
-                    Text("per one")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
-                .padding(40)
-                .background(Color.purple)
-                .cornerRadius(10)
+                PricingView()
                 
                 VStack {
                     Text("PlanB")
@@ -65,5 +50,26 @@ struct HeaderView: View {
                 .font(.system(.largeTitle, design: .rounded))
                 .fontWeight(.black)
         }
+    }
+}
+
+struct PricingView: View {
+    var body: some View {
+        VStack {
+            Text("PlanA")
+                .font(.system(.title, design: .rounded))
+                .fontWeight(.black)
+                .foregroundColor(.white)
+            Text("$9")
+                .font(.system(size: 40, weight: .heavy, design: .rounded))
+                .foregroundColor(.white)
+            Text("per one")
+                .font(.headline)
+                .foregroundColor(.white)
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
+        .padding(40)
+        .background(Color.purple)
+        .cornerRadius(10)
     }
 }
