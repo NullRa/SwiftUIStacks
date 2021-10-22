@@ -30,25 +30,7 @@ struct ContentView: View {
             .padding(.horizontal)
             
             ZStack {
-                VStack {
-                    Image(systemName: "wand.and.rays")
-                        .font(.system(.largeTitle, design: .rounded))
-                        .foregroundColor(.white)
-                    Text("PlanC")
-                        .font(.system(.title, design: .rounded))
-                        .fontWeight(.black)
-                        .foregroundColor(.white)
-                    Text("$299")
-                        .font(.system(size: 40, weight: .heavy, design: .rounded))
-                        .foregroundColor(.white)
-                    Text("Perfect teams")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
-                .padding(20)
-                .background(Color.gray)
-                .cornerRadius(10)
+                PricingView(title: "PlanC", price: "$299", description: "perfect company", textColor: .white, bgColor: .gray, icon: "wand.and.rays", paddingValue: 20)
                 .padding()
                 
                 Text("Best for teams with 30 members")
