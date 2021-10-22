@@ -13,7 +13,7 @@ struct ContentView: View {
             HeaderView()
             
             HStack {
-                PricingView()
+                PricingView(title: "PlanA", price: "$9", description: "per one", textColor: .white, bgColor: .purple)
                 
                 VStack {
                     Text("PlanB")
@@ -54,22 +54,28 @@ struct HeaderView: View {
 }
 
 struct PricingView: View {
+    var title: String
+    var price: String
+    var description: String
+    var textColor: Color
+    var bgColor: Color
+    
     var body: some View {
         VStack {
-            Text("PlanA")
+            Text(title)
                 .font(.system(.title, design: .rounded))
                 .fontWeight(.black)
-                .foregroundColor(.white)
-            Text("$9")
+                .foregroundColor(textColor)
+            Text(price)
                 .font(.system(size: 40, weight: .heavy, design: .rounded))
-                .foregroundColor(.white)
-            Text("per one")
+                .foregroundColor(textColor)
+            Text(description)
                 .font(.headline)
-                .foregroundColor(.white)
+                .foregroundColor(textColor)
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
         .padding(40)
-        .background(Color.purple)
+        .background(bgColor)
         .cornerRadius(10)
     }
 }
