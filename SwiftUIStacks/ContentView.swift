@@ -26,9 +26,39 @@ struct ContentView: View {
                         .background(Color(red: 255/255, green: 183/255, blue: 37/255))
                         .offset(x: 0, y: 87)
                 }
-                
             }
             .padding(.horizontal)
+            
+            ZStack {
+                VStack {
+                    Image(systemName: "wand.and.rays")
+                        .font(.system(.largeTitle, design: .rounded))
+                        .foregroundColor(.white)
+                    Text("PlanC")
+                        .font(.system(.title, design: .rounded))
+                        .fontWeight(.black)
+                        .foregroundColor(.white)
+                    Text("$299")
+                        .font(.system(size: 40, weight: .heavy, design: .rounded))
+                        .foregroundColor(.white)
+                    Text("Perfect teams")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
+                .padding(20)
+                .background(Color.gray)
+                .cornerRadius(10)
+                .padding()
+                
+                Text("Best for teams with 30 members")
+                    .font(.system(.caption, design: .rounded))
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding(5)
+                    .background(Color(red: 255/255, green: 183/255, blue: 37/255))
+                    .offset(x: 0, y: 87)
+            }
         }
     }
 }
