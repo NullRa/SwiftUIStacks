@@ -13,10 +13,10 @@ struct ContentView: View {
             HeaderView()
             
             HStack {
-                PricingView(title: "PlanA", price: "$9", description: "per one", textColor: .white, bgColor: .purple)
+                PricingView(title: "PlanA", price: "$9", description: "per one", textColor: .white, bgColor: .purple, paddingValue: 40)
                 
                 ZStack {
-                    PricingView(title: "PlanB", price: "$19", description: "per family", textColor: .black, bgColor: Color(red: 240/255, green: 240/255, blue: 240/255))
+                    PricingView(title: "PlanB", price: "$19", description: "per family", textColor: .black, bgColor: Color(red: 240/255, green: 240/255, blue: 240/255), paddingValue: 40)
                     
                     Text("Best for a team")
                         .font(.system(.caption, design: .rounded))
@@ -88,9 +88,16 @@ struct PricingView: View {
     var description: String
     var textColor: Color
     var bgColor: Color
+    var icon: String?
+    var paddingValue: CGFloat
     
     var body: some View {
         VStack {
+            if let icon = icon {
+                Image(systemName: icon)
+                    .font(.system(.largeTitle, design: .rounded))
+                    .foregroundColor(textColor)
+            }
             Text(title)
                 .font(.system(.title, design: .rounded))
                 .fontWeight(.black)
@@ -103,7 +110,7 @@ struct PricingView: View {
                 .foregroundColor(textColor)
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
-        .padding(40)
+        .padding(paddingValue)
         .background(bgColor)
         .cornerRadius(10)
     }
