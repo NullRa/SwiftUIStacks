@@ -25,6 +25,7 @@ struct ContentView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                 }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
                 .padding(40)
                 .background(Color.purple)
                 .cornerRadius(10)
@@ -38,6 +39,7 @@ struct ContentView: View {
                     Text("per family")
                         .font(.headline)
                 }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
                 .padding(40)
                 .background(Color(red: 240/255, green: 240/255, blue: 240/255))
                 .cornerRadius(10)
