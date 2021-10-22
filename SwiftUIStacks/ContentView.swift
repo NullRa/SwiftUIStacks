@@ -15,7 +15,16 @@ struct ContentView: View {
             HStack {
                 PricingView(title: "PlanA", price: "$9", description: "per one", textColor: .white, bgColor: .purple)
                 
-                PricingView(title: "PlanB", price: "$19", description: "per family", textColor: .black, bgColor: Color(red: 240/255, green: 240/255, blue: 240/255))
+                ZStack {
+                    PricingView(title: "PlanB", price: "$19", description: "per family", textColor: .black, bgColor: Color(red: 240/255, green: 240/255, blue: 240/255))
+                    
+                    Text("Best for a team")
+                        .font(.system(.caption, design: .rounded))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(5)
+                        .background(Color(red: 255/255, green: 183/255, blue: 37/255))
+                }
                 
             }
             .padding(.horizontal)
