@@ -31,7 +31,7 @@ struct ContentView: View {
             
             ZStack {
                 PricingView(title: "PlanC", price: "$299", description: "perfect company", textColor: .white, bgColor: .gray, icon: "wand.and.rays", paddingValue: 20)
-                .padding()
+                    .padding()
                 
                 Text("Best for teams with 30 members")
                     .font(.system(.caption, design: .rounded))
@@ -55,14 +55,18 @@ struct ContentView_Previews: PreviewProvider {
 
 struct HeaderView: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 2) {
-            Text("Choose")
-                .font(.system(.largeTitle, design: .rounded))
-                .fontWeight(.black)
-            Text("Your Plan")
-                .font(.system(.largeTitle, design: .rounded))
-                .fontWeight(.black)
+        HStack {
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Choose")
+                    .font(.system(.largeTitle, design: .rounded))
+                    .fontWeight(.black)
+                Text("Your Plan")
+                    .font(.system(.largeTitle, design: .rounded))
+                    .fontWeight(.black)
+            }
+            Spacer()
         }
+        .padding()
     }
 }
 
