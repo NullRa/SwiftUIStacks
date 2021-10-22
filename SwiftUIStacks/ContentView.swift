@@ -12,21 +12,23 @@ struct ContentView: View {
         VStack {
             HeaderView()
             
-            VStack {
-                Text("PlanA")
-                    .font(.system(.title, design: .rounded))
-                    .fontWeight(.black)
-                    .foregroundColor(.white)
-                Text("$9")
-                    .font(.system(size: 40, weight: .heavy, design: .rounded))
-                    .foregroundColor(.white)
-                Text("per one")
-                    .font(.headline)
-                    .foregroundColor(.white)
+            HStack {
+                VStack {
+                    Text("PlanA")
+                        .font(.system(.title, design: .rounded))
+                        .fontWeight(.black)
+                        .foregroundColor(.white)
+                    Text("$9")
+                        .font(.system(size: 40, weight: .heavy, design: .rounded))
+                        .foregroundColor(.white)
+                    Text("per one")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                }
+                .padding(40)
+                .background(Color.purple)
+                .cornerRadius(10)
             }
-            .padding(40)
-            .background(Color.purple)
-            .cornerRadius(10)
         }
     }
 }
